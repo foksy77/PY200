@@ -83,17 +83,10 @@ class LinkedList(MutableSequence):
         """
         left_node.next = right_node
 
-    @property
-    def next(self):
-        return self._next
-
-    @next.setter
-    def next(self, next_: Optional["LinkedList"]):
-        self.is_valid(next_)
-        self._next = next_
 
 class DoubleLinkedList(LinkedList):
     ...
+
 
 if __name__ == "__main__":
     print("LinkedList ", "="*10)
