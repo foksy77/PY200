@@ -20,7 +20,7 @@ files:
     status: Solved
     encrypted_possible_answer: left_node.set_next(right_node)
   - offset: 1142
-    length: 101
+    length: 100
     placeholder_text: '...  # TODO связать между собой два узла с помощью функции
       linked_nodes'
     initial_state:

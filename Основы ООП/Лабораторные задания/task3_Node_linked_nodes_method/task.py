@@ -42,7 +42,7 @@ if __name__ == '__main__':
     first_node = Node(1)
     second_node = Node(2)
 
-    linked_nodes(first_node, second_node)  #  связать между собой два узла с помощью функции linked_nodes
+    linked_nodes(first_node, second_node)  # связать между собой два узла с помощью функции linked_nodes
 
     print(first_node)
     print(second_node)
