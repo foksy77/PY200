@@ -1,10 +1,12 @@
 from collections.abc import MutableSequence
 from typing import Any, Iterable, Optional
+
 from node import Node, DoubleLinkedNode
 
 
 class LinkedList(MutableSequence):
     CLASS_NODE = Node
+
     def __init__(self, data: Iterable = None):
         """ Конструктор односвязного списка """
         self.len = 0
@@ -15,16 +17,17 @@ class LinkedList(MutableSequence):
             for value in data:
                 self.append(value)
 
-    def is_valid(self, linkedlist: Any) -> None:
+    def is_valid(self, linkedlist: Any) -> None:  # todo убрать
         if not isinstance(linkedlist, (type(None), LinkedList)):
             raise TypeError
 
-    def insert(self, index: int, value: Any) -> None:
+    def insert(self, index: int, value: Any) -> None:  # fixme реализовать
         ...
 
     def append(self, value: Any) -> None:
         """ Добавление элемента в конец связного списка. """
-        append_node = Node(value)
+        append_node = Node(value)  # при таком раскладе надо перегрузить в DoubleLinkedList
+        # append_node = self.CLASS_NODE(value)  # при таком раскладе наследуем в DoubleLinkedList
 
         if self.head is None:
             self.head = self.tail = append_node
@@ -58,10 +61,13 @@ class LinkedList(MutableSequence):
         node = self.step_by_step_on_nodes(index)
         node.value = value
 
-    def __delitem__(self, key):
+    def __delitem__(self, key):  # fixme реализовать
         ...
 
     def __len__(self):
+        ...
+
+    def remove(self, value):  # todo fixme
         ...
 
     def to_list(self) -> list:
