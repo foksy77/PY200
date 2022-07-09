@@ -17,10 +17,6 @@ class LinkedList(MutableSequence):
             for value in data:
                 self.append(value)
 
-    def is_valid(self, linkedlist: Any) -> None:  # todo убрать
-        if not isinstance(linkedlist, (type(None), LinkedList)):
-            raise TypeError
-
     def insert(self, index: int, value: Any) -> None:  # fixme реализовать
         ...
 
