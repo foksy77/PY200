@@ -1,10 +1,10 @@
 from collections.abc import MutableSequence
 from typing import Any, Iterable, Optional
-from node import Node
+from node import Node, DoubleLinkedNode
 
 
 class LinkedList(MutableSequence):
-
+    CLASS_NODE = Node
     def __init__(self, data: Iterable = None):
         """ Конструктор односвязного списка """
         self.len = 0
@@ -85,6 +85,7 @@ class LinkedList(MutableSequence):
 
 
 class DoubleLinkedList(LinkedList):
+    CLASS_NODE = DoubleLinkedNode
     ...
 
 
