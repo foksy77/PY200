@@ -21,7 +21,7 @@ class Node:
     def __str__(self) -> str:
         return str(self.value)
 
-    def is_valid(self, node: Any) -> None:
+    def is_valid(self, node: Any) -> None:  # todo staticmethod
         if not isinstance(node, (type(None), Node)):
             raise TypeError
 
@@ -55,7 +55,7 @@ class DoubleLinkedNode(Node):
             f"{self.__class__.__name__}({self.prev.value}, {None}, {None})"
         return f"{self.__class__.__name__}({self.value}, {next_repr}, {prev_repr})"
 
-    def is_valid(self, node: Any) -> None:
+    def is_valid(self, node: Any) -> None:  # todo staticmethod
         if not isinstance(node, (type(None), DoubleLinkedNode)):
             raise TypeError
 

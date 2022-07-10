@@ -6,9 +6,9 @@ class Node:
 
     def __init__(self, value: Any, next_: Optional["Node"] = None):
         """
-        Создаем новый узел для односвязного списка
-        :param value: Любое значение, которое помещено в узел
-        :param next_: следующий узел, если он есть
+        Создаем новый узел для односвязного списка.
+        :param value: Любое значение, которое помещено в узел.
+        :param next_: следующий узел, если он есть.
         """
         self.value = value
         self.next = next_  # вызовется setter
@@ -40,10 +40,10 @@ class DoubleLinkedNode(Node):
 
     def __init__(self, value: Any, next_: Optional["Node"] = None, prev_: Optional["Node"] = None):
         """
-        Создаем новый узел для многосвязного списка
-        :param value: Любое значение, которое помещено в узел
-        :param next_: следующий узел, если он есть
-        :param prev_: предыдущий узел, если он есть
+        Создаем новый узел для многосвязного списка.
+        :param value: Любое значение, которое помещено в узел.
+        :param next_: следующий узел, если он есть.
+        :param prev_: предыдущий узел, если он есть.
         """
         super().__init__(value, next_)
         self.prev = prev_  # вызовется setter
