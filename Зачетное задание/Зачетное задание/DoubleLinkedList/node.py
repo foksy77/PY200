@@ -67,3 +67,35 @@ class DoubleLinkedNode(Node):
     def prev(self, prev_: Optional["DoubleLinkedNode"]):
         self.is_valid(prev_)
         self._prev = prev_
+
+if __name__ == "__main__":
+    node_1 = Node(10)
+    node_2 = Node(20)
+    node_3 = Node(30)
+    node_4 = Node(40)
+
+    node_1.next = node_2
+    node_2.next = node_3
+    node_3.next = node_4
+
+    print(node_1.value)
+    print(node_1)
+    print(node_1.__repr__())
+
+
+    first_node = DoubleLinkedNode(1)
+    second_node = DoubleLinkedNode(2)
+    third_node = DoubleLinkedNode(3)
+    fourth_node = DoubleLinkedNode(4)
+
+    first_node.next = second_node
+    second_node.prev = first_node
+    second_node.next = third_node
+    third_node.prev = second_node
+    third_node.next = fourth_node
+    fourth_node.prev = third_node
+
+    print(repr(first_node))
+    print(repr(second_node))
+    print(repr(third_node))
+    print(repr(fourth_node))
